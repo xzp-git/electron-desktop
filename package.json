@@ -1,0 +1,14 @@
+{
+  "name": "electron-desktop",
+  "version": "1.0.0",
+  "repository": "git@github.com:xzp-git/electron-desktop.git",
+  "author": "xingzepeng <xingzepeng@bytedance.com>",
+  "license": "MIT",
+  "main": "src/main/index.js",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^25.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron Desktop</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #abe3f1;
+        -webkit-app-region: drag;
+        /* 移动或者关闭一个没有标题栏的窗口 
+        -webkit-app-region: drag;把整个 html 都变成了一个可拖拽的对象。
+        */
+      }
+      img {
+        width: 200px;
+      }
+      h1 {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://img.zlib.cn/electron.webp" alt="" />
+    <h1>Electron 实战训练营</h1>
+  </body>
+</html>
