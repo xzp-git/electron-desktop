@@ -41,9 +41,14 @@ function createWindow() {
     mainWindow = new BrowserWindow({
       width,
       height,
+      webPreferences: {
+        preload: path.join(__dirname, '../renderer/preload/index.js'),
+        sandbox: false,
+      },
     })
-    mainWindow.loadURL('https://www.juejin.cn')
+    mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'))
   }
+  mainWindow.webContents.openDevTools({ mode: 'right' })
 }
 
 function handleSchemeWakeup(argv) {

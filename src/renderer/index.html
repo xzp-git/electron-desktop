@@ -29,5 +29,26 @@
   <body>
     <img src="https://img.zlib.cn/electron.webp" alt="" />
     <h1>Electron 实战训练营</h1>
+    <p id="platform">操作系统：</p>
+    <p id="release">版本号：</p>
+    <label for="路径">路径: <input type="text" id="url" /></label>
+    <label for="内容">内容:<textarea id="content"> </textarea></label>
+    <button type="button" id="btn">保存</button>
   </body>
+
+  <script>
+    // /Users/bytedance/code/electron-desktop/1.txt
+    console.log('渲染进程', electron.saveFile)
+    console.dir(btn)
+    btn.onclick = async function () {
+      console.log(url.value, content.value, 'url.value, content.value')
+      try {
+        await electron.saveFile(url.value, content.value)
+        alert('保存成功')
+      } catch (error) {
+        console.log(error)
+        alert('保存失败')
+      }
+    }
+  </script>
 </html>
